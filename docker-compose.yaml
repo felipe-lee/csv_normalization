@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    image: csv-normalization-dev
+    tty: true
+    stdin_open: true
+    volumes:
+      - type: bind
+        source: ./
+        target: /app
