@@ -18,6 +18,10 @@ test:  ## Run tests; can pass extra args like this: make test OPTIONS="-s"
 .PHONY: build-test ## Build local dev image and run tests
 build-test: build-dev test
 
+.PHONY: normalize
+normalize:  ## Normalize CSV file
+	docker-compose run --rm app python3 src/csv_normalizer.py
+
 .PHONY: lint
 lint:  ## Run black to lint code
 	docker-compose run --rm app black .
