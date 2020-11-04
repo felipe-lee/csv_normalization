@@ -1,0 +1,8 @@
+[run]
+source = ./
+omit = */tests/*,venv/*,.history/*
+data_file = .coverage
+branch = true
+
+[report]
+show_missing = True
